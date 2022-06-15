@@ -53,7 +53,7 @@ Environment Variables for Multiple Instances of Plugin (Omitted by default.)
 
 import sys
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.apache import ApacheInfo
+from pymunin.sysinfo.apache import ApacheInfo
 
 __author__ = "Ali Onur Uyar"
 __copyright__ = "Copyright 2011, Ali Onur Uyar"

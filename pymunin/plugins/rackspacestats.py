@@ -57,7 +57,7 @@ Environment Variables for Multiple Instances of Plugin (Omitted by default.)
 
 import sys
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.rackspace import CloudFilesInfo
+from pymunin.sysinfo.rackspace import CloudFilesInfo
 
 __author__ = "Ben Welsh"
 __copyright__ = "Copyright 2012, Ben Welsh"

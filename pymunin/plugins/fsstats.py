@@ -46,7 +46,7 @@ Environment Variables for Multiple Instances of Plugin (Omitted by default.)
 
 import sys
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.freeswitch import FSinfo
+from pymunin.sysinfo.freeswitch import FSinfo
 
 __author__ = "Ali Onur Uyar"
 __copyright__ = "Copyright 2011, Ali Onur Uyar"

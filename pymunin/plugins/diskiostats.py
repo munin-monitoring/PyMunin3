@@ -47,7 +47,7 @@ Environment Variables
 import sys
 from pymunin import (MuninGraph, MuninPlugin, muninMain, 
                      fixLabel, maxLabelLenGraphSimple, maxLabelLenGraphDual)
-from pysysinfo.diskio import DiskIOinfo
+from pymunin.sysinfo.diskio import DiskIOinfo
 
 __author__ = "Ali Onur Uyar"
 __copyright__ = "Copyright 2011, Ali Onur Uyar"

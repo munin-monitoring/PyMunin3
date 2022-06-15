@@ -78,7 +78,7 @@ Environment Variables for Multiple Instances of Plugin (Omitted by default.)
 import sys
 import re
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.asterisk import AsteriskInfo
+from pymunin.sysinfo.asterisk import AsteriskInfo
 
 __author__ = "Ali Onur Uyar"
 __copyright__ = "Copyright 2011, Ali Onur Uyar"
@@ -235,7 +235,7 @@ class MuninAsteriskPlugin(MuninPlugin):
              or self.graphEnabled('asterisk_queue_abandon_pcent'))
             and self._ami.hasQueue()):
             self._queues = self._ami.getQueueStats()
-            self._queue_list = [queue for queue in self._queues.keys()
+            self._queue_list = [queue for queue in list(self._queues.keys())
                                 if self.envCheckFilter('queues', queue)]
             self._queue_list.sort()
             if self.graphEnabled('asterisk_queue_abandon_pcent'):

@@ -58,7 +58,7 @@ Environment Variables for Multiple Instances of Plugin (Omitted by default.)
 
 import sys
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.nginx import NginxInfo
+from pymunin.sysinfo.nginx import NginxInfo
 
 __author__ = "Ali Onur Uyar"
 __copyright__ = "Copyright 2011, Ali Onur Uyar"

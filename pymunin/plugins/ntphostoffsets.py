@@ -46,7 +46,7 @@ Environment Variables for Multiple Instances of Plugin (Omitted by default.)
 import sys
 import re
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.ntp import NTPinfo
+from pymunin.sysinfo.ntp import NTPinfo
 
 __author__ = "Ali Onur Uyar"
 __copyright__ = "Copyright 2011, Ali Onur Uyar"

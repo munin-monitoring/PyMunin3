@@ -40,7 +40,7 @@ Environment Variables
 
 import sys
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.wanpipe import WanpipeInfo
+from pymunin.sysinfo.wanpipe import WanpipeInfo
 
 __author__ = "Ali Onur Uyar"
 __copyright__ = "Copyright 2011, Ali Onur Uyar"

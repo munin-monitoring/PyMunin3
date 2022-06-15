@@ -38,7 +38,7 @@ Environment Variables
 
 import sys
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.netstat import NetstatInfo
+from pymunin.sysinfo.netstat import NetstatInfo
 
 __author__ = "Ali Onur Uyar"
 __copyright__ = "Copyright 2011, Ali Onur Uyar"

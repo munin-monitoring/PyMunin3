@@ -55,7 +55,7 @@ Environment Variables for Multiple Instances of Plugin (Omitted by default.)
 
 import sys
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.phpopc import OPCinfo
+from pymunin.sysinfo.phpopc import OPCinfo
 
 __author__ = "Preston M."
 __copyright__ = "Copyright 2011, Ali Onur Uyar"
@@ -154,7 +154,7 @@ class MuninPHPOPCPlugin(MuninPlugin):
         if self.hasGraph('php_opc_memory') and stats:
             mem = stats['memory_usage']
             keys = ('used_memory', 'wasted_memory', 'free_memory')
-            map(lambda k:self.setGraphVal('php_opc_memory',k,mem[k]), keys)
+            list(map(lambda k:self.setGraphVal('php_opc_memory',k,mem[k]), keys))
 
         if self.hasGraph('php_opc_opcache_statistics') and stats:
             st = stats['opcache_statistics']

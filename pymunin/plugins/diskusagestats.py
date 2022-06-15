@@ -44,7 +44,7 @@ Environment Variables
 import sys
 from pymunin import (MuninGraph, MuninPlugin, muninMain, 
                      fixLabel, maxLabelLenGraphSimple)
-from pysysinfo.filesystem import FilesystemInfo
+from pymunin.sysinfo.filesystem import FilesystemInfo
 
 __author__ = "Ali Onur Uyar"
 __copyright__ = "Copyright 2011, Ali Onur Uyar"
@@ -94,7 +94,7 @@ class MuninDiskUsagePlugin(MuninPlugin):
                 args='--base 1000 --lower-limit 0', printf='%6.1lf',
                 autoFixNames=True)
             for fspath in self._fslist:
-                if self._statsSpace.has_key(fspath):
+                if fspath in self._statsSpace:
                     graph.addField(fspath, 
                         fixLabel(fspath, maxLabelLenGraphSimple, 
                                  delim='/', repl='..', truncend=False), 
@@ -110,7 +110,7 @@ class MuninDiskUsagePlugin(MuninPlugin):
                 args='--base 1000 --lower-limit 0', printf='%6.1lf',
                 autoFixNames=True)
             for fspath in self._fslist:
-                if self._statsInode.has_key(fspath):
+                if fspath in self._statsInode:
                     graph.addField(fspath,
                         fixLabel(fspath, maxLabelLenGraphSimple, 
                                  delim='/', repl='..', truncend=False), 
@@ -123,13 +123,13 @@ class MuninDiskUsagePlugin(MuninPlugin):
         name = 'diskspace'
         if self.hasGraph(name):
             for fspath in self._fslist:
-                if self._statsSpace.has_key(fspath):
+                if fspath in self._statsSpace:
                     self.setGraphVal(name, fspath, 
                                      self._statsSpace[fspath]['inuse_pcent'])
         name = 'diskinode'
         if self.hasGraph(name):
             for fspath in self._fslist:
-                if self._statsInode.has_key(fspath):
+                if fspath in self._statsInode:
                     self.setGraphVal(name, fspath, 
                                      self._statsInode[fspath]['inuse_pcent'])
 

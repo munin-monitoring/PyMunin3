@@ -36,7 +36,7 @@ Environment Variables
 
 import sys
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.netiface import NetIfaceInfo
+from pymunin.sysinfo.netiface import NetIfaceInfo
 
 __author__ = "Ali Onur Uyar"
 __copyright__ = "Copyright 2011, Ali Onur Uyar"

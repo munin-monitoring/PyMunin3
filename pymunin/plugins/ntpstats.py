@@ -32,7 +32,7 @@ Environment Variables
 
 import sys
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.ntp import NTPinfo
+from pymunin.sysinfo.ntp import NTPinfo
 
 
 __author__ = "Ali Onur Uyar"

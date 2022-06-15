@@ -65,7 +65,7 @@ Environment Variables for Multiple Instances of Plugin (Omitted by default.)
 
 import sys
 from pymunin import MuninGraph, MuninPlugin, muninMain
-from pysysinfo.redisdb import RedisInfo
+from pymunin.sysinfo.redisdb import RedisInfo
 
 __author__ = "Ali Onur Uyar"
 __copyright__ = "Copyright 2011, Ali Onur Uyar"
@@ -111,7 +111,7 @@ class RedisPlugin(MuninPlugin):
         
         cmd_list = []
         db_list = []
-        for k in self._stats.keys():
+        for k in list(self._stats.keys()):
             if k.startswith('cmdstat_'):
                 cmd_list.append(k[len('cmdstat_'):])
             elif k.startswith('db'):
@@ -235,7 +235,7 @@ class RedisPlugin(MuninPlugin):
                                    info=graph_info, 
                                    args='--base 1000 --lower-limit 0')
                 for fname, flabel, fdraw, ftype, finfo in graph_fields:
-                    if self._stats.has_key(fname):
+                    if fname in self._stats:
                         graph.addField(fname, flabel, draw=fdraw, type=ftype, 
                                        min=0, info=finfo)
                 if graph.getFieldCount() > 0:
