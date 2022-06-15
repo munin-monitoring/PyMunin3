@@ -7,6 +7,6 @@
 docs/_build/*
 dist/*
 build/*
-*.egg-info/*
+*.egg-info*
 .coverage
 _site
