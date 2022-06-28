@@ -1,1 +1,2 @@
-include download.txt
+exclude doc/
+exclude .gitignore

@@ -23,7 +23,7 @@ _PyMunin_ implements the base classes for developing Munin plugins. Although the
 
 _PyMunin3_ is free software made available under the terms of the _GPL License Version 3_.
 
-See the _COPYING_ file that accompanies the code for full licensing information.
+See the LICENSE file that accompanies the code for full licensing information.
 
 ## Download
 
