@@ -13,17 +13,9 @@ try:
     import cPickle as pickle
 except ImportError:
     import pickle
+from . import _version
 
-__author__ = "Ali Onur Uyar"
-__copyright__ = "Copyright 2011, Ali Onur Uyar"
-__credits__ = ["Samuel Stauffer (https://github.com/samuel)",
-               "Mark Lavin (https://github.com/mlavin)"]
-__license__ = "GPL"
-__version__ = "0.9.28"
-__maintainer__ = "Ali Onur Uyar"
-__email__ = "aouyar at gmail.com"
-__status__ = "Development"
-
+__version__ = _version.version
 
 maxLabelLenGraphSimple = 40
 maxLabelLenGraphDual = 14
