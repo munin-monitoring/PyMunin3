@@ -126,12 +126,12 @@ class MuninPlugin:
             and len(argv) > 0
             and re.search("_$", self.plugin_name)
         ):
-            mobj = re.match("%s(\S+)$" % self.plugin_name, os.path.basename(argv[0]))
+            mobj = re.match(r"%s(\S+)$" % self.plugin_name, os.path.basename(argv[0]))
             if mobj:
                 self.arg0 = mobj.group(1)
         self._parseEnv()
         if self.isMultigraph:
-            self.envRegisterFilter("graphs", "^[\w\-]+$")
+            self.envRegisterFilter("graphs", r"^[\w\-]+$")
             self._nestedGraphs = self.envCheckFlag("nested_graphs", True)
             if self.isMultiInstance:
                 self._instanceName = self.envGet("instance_name")
@@ -372,7 +372,7 @@ class MuninPlugin:
         else:
             return default
 
-    def envGetList(self, name, attr_regex="^\w+$", conv=None):
+    def envGetList(self, name, attr_regex=r"^\w+$", conv=None):
         """Parse the plugin environment variables to return list from variable
         with name list_<name>. The value of the variable must be a comma
         separated list of items.
@@ -403,7 +403,7 @@ class MuninPlugin:
 
         return item_list
 
-    def envRegisterFilter(self, name, attr_regex="^\w+$", default=True):
+    def envRegisterFilter(self, name, attr_regex=r"^\w+$", default=True):
         """Register filter for including, excluding attributes in graphs through
         the use of include_<name> and exclude_<name> environment variables.
         The value of the variables must be a comma separated list of items.
@@ -500,7 +500,7 @@ class MuninPlugin:
         try:
             fp = open(self._stateFile, "w")
             pickle.dump(stateObj, fp)
-        except:
+        except Exception:
             raise IOError(
                 "Failure in storing plugin state in file: %s" % self._stateFile
             )
@@ -517,7 +517,7 @@ class MuninPlugin:
             try:
                 fp = open(self._stateFile, "r")
                 stateObj = pickle.load(fp)
-            except:
+            except Exception:
                 raise IOError(
                     "Failure in reading plugin state from file: %s" % self._stateFile
                 )
