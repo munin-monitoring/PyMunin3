@@ -65,3 +65,11 @@ write_to = "src/pymunin/_version.py"
 
 [tool.black]
 
+[tool.flakeheaven]
+format = "colored"
+max_line_length = "88" # Black's default
+show_source = true
+
+[tool.flakeheaven.plugins]
+pycodestyle = ["-*"] # We use Black for code style
+pyflakes = ["+*"]
