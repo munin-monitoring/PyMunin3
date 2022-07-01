@@ -63,4 +63,5 @@ write_to = "src/pymunin/_version.py"
         name = "Misc"
         showcontent = false
 
+[tool.black]
 
