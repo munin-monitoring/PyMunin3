@@ -1,3 +1,6 @@
-exclude doc/
+prune docs/
 exclude .gitignore
-exclude changelog.d/
+prune changelog.d/
+exclude .git-blame-ignore-revs
+prune .github/
+exclude .pre-commit-config.yml

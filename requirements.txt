@@ -1,0 +1,5 @@
+black = stable
+flakeheaven
+pre-commit
+pyflakes
+towncrier >= 21.9.0

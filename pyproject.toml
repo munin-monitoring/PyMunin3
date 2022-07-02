@@ -20,7 +20,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: System :: Monitoring",
 ]
-dynamic = ["version"] 
+dynamic = ["version"]
 
 [project.urls]
 Homepage = "https://aouyar.github.io/PyMunin"
