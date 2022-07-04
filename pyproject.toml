@@ -8,7 +8,7 @@ description = "Package for developing Munin Multigraph Plugins"
 keywords = ["munin", "monitoring"]
 authors = [{name = "Sandro", email = "devel@penguinpee.nl"}]
 readme = "README.md"
-license = {file = "LICENSE"}
+license = {text = "GPLv3"}
 requires-python = ">=3.7"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
