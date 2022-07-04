@@ -1,12 +1,18 @@
 # Python Package for Munin Multigraph Plugins
 
+[![PyPI](https://img.shields.io/pypi/v/PyMunin3?style=plastic)](https://pypi.org/project/PyMunin3)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/PyMunin3?style=plastic)
+[![PyPI - License](https://img.shields.io/pypi/l/PyMunin3?style=plastic)](https://opensource.org/licenses/GPL-3.0)
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=plastic)](https://github.com/psf/black)
+
 ## Origin
 
 Standalone Python 3 adaptation of the [PyMunin](https://github.com/aouyar/PyMunin) package. This package does **not include** the plugins. If you are interested in the plugins, you can find the [Python 3 adaptation](https://github.com/penguinpee/PyMunin3/tree/pymunin_plugins_proposal) on GitHub. A [test release](https://test.pypi.org/project/PyMuninPlugins/) is available on TestPyPI.
 
 ## About
 
-Python package for developing Munin Multigraph Plugins.
+Python module for developing Munin Multigraph Plugins.
 
 More detailed documentation of the project and sample graphs for plugins are published on the [PyMunin Project Web Page](https://aouyar.github.io/PyMunin/).
 
@@ -17,7 +23,7 @@ More information on Multigraph Plugins can be found in the
 * [Multigraph Plugins](https://guide.munin-monitoring.org/en/latest/plugin/multigraphing.html)
 * [Multigraph Protocol Extension](https://guide.munin-monitoring.org/en/latest/plugin/protocol-multigraph.html)
 
-_PyMunin_ implements the base classes for developing Munin plugins. Although the solution is focused on implementing _multigraph_ plugins the module also supports simple _single graph_ plugins.
+The _pymunin_ module implements the base classes for developing Munin plugins. Although the solution is focused on implementing _multigraph_ plugins the module also supports simple _single graph_ plugins.
 
 ## Licensing
 
@@ -27,9 +33,9 @@ See the LICENSE file that accompanies the code for full licensing information.
 
 ## Download
 
-New versions are released on [PyPI](https://pypi.python.org/pypi/PyMunin3) (the Python Package Index) periodically. You can download the latest development version of the code from [GitHub](https://github.com/penguinpee/PyMunin3) either in [ZIP](https://github.com/penguinpee/PyMunin3/zipball/master) or [TAR](https://github.com/penguinpee/PyMunin3/tarball/master) format.
+New versions are released on [PyPI](https://pypi.python.org/pypi/PyMunin3) (the Python Package Index) periodically.
 
-You can also get the latest development version of the code by cloning the Git repository for the project:
+You can get the latest development version of the code by cloning the Git repository for the project:
 
 ```bash
 git clone git://github.com/penguinpee/PyMunin3
@@ -43,7 +49,7 @@ The easiest way to install the module is by using pip:
 pip install PyMunin3
 ```
 
-Another option is to download and extract the code manually and build:
+To build and install from source:
 
 ```bash
 cd PyMunin3
@@ -79,6 +85,6 @@ Some of the people that have knowingly or unknowingly contributed to the develop
 
 >I hope that more people will be using PyMunin for developing plugins in the future.
 
-I released **PyMunin3** to give credit to the original [PyMunin](https://github.com/aouyar/PyMunin) package. Adapting it to Python 3 allowed me to quickly develop a plugin in Python. Hopefully, others will discover the usefulness of this _excellent_ package and more plugins using PyMunin will appear in the [Munin Plugin Gallary](https://gallery.munin-monitoring.org/implementation_languages/python3/).
+I released **PyMunin3** to give credit to the original [PyMunin](https://github.com/aouyar/PyMunin) package. Adapting it to Python 3 allowed me to quickly develop a plugin in Python. Hopefully, others will discover the usefulness of this _excellent_ module and more plugins using PyMunin will appear in the [Munin Plugin Gallary](https://gallery.munin-monitoring.org/implementation_languages/python3/).
 
 My intention is to get these changes merged into the original PyMunin package, eventually. I contacted Ali about it, but he doesn't appear to have much time at the moment.
