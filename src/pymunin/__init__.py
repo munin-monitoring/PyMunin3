@@ -785,7 +785,7 @@ class MuninPlugin:
                 for graph_name in subgraph_names:
                     graph = self._subgraphDict[parent_name][graph_name]
                     print(
-                        "multigraph %s" % self.getMultigraphID(parent_name, graph_name)
+                        "multigraph %s" % self._getMultigraphID(parent_name, graph_name)
                     )
                     print(self._formatConfig(graph.getConfig()))
                     if self._dirtyConfig:
@@ -824,7 +824,7 @@ class MuninPlugin:
                 for graph_name in subgraph_names:
                     graph = self._subgraphDict[parent_name][graph_name]
                     print(
-                        "multigraph %s" % self.getMultigraphID(parent_name, graph_name)
+                        "multigraph %s" % self._getMultigraphID(parent_name, graph_name)
                     )
                     print(self._formatVals(graph.getVals()))
                     print()
