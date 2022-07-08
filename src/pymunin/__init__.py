@@ -151,7 +151,7 @@ class MuninPlugin:
 
         Parses for environment variables common to all Munin Plugins:
             - MUNIN_STATEFILE
-            - MUNIN_CAP_DIRTY_CONFIG
+            - MUNIN_CAP_DIRTYCONFIG
             - nested_graphs
 
         @param env: Dictionary of environment variables.
@@ -165,8 +165,9 @@ class MuninPlugin:
             self._stateFile = env.get("MUNIN_STATEFILE")
         else:
             self._stateFile = "/tmp/munin-state-%s" % self.plugin_name
-        if "MUNIN_CAP_DIRTY_CONFIG" in env:
-            self._dirtyConfig = True
+        if "MUNIN_CAP_DIRTYCONFIG" in env:
+            if env.get("MUNIN_CAP_DIRTYCONFIG") == "1":
+                self._dirtyConfig = True
 
     def _getGraph(self, graph_name, fail_noexist=False):
         """Private method for returning graph object with name graph_name.
@@ -771,6 +772,8 @@ class MuninPlugin:
             if self.isMultigraph:
                 print("multigraph %s" % self._getMultigraphID(parent_name))
             print(self._formatConfig(graph.getConfig()))
+            if self._dirtyConfig:
+                print(self._formatVals(graph.getVals()))
             print()
         if (
             self.isMultigraph
@@ -785,6 +788,8 @@ class MuninPlugin:
                         "multigraph %s" % self.getMultigraphID(parent_name, graph_name)
                     )
                     print(self._formatConfig(graph.getConfig()))
+                    if self._dirtyConfig:
+                        print(self._formatVals(graph.getVals()))
                     print()
         return True
 
@@ -801,7 +806,6 @@ class MuninPlugin:
         """Implements Munin Plugin Fetch Option.
 
         Prints out measured values.
-
         """
         self.retrieveVals()
         for parent_name in self._graphNames:
@@ -835,9 +839,9 @@ class MuninPlugin:
         if oper == "fetch":
             ret = self.fetch()
         elif oper == "config":
+            if self._dirtyConfig:
+                self.retrieveVals()
             ret = self.config()
-            if ret and self._dirtyConfig:
-                ret = self.fetch()
         elif oper == "autoconf":
             ret = self.autoconf()
             if ret:
