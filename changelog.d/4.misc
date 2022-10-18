@@ -1,1 +1,0 @@
-Lower setuptools requirement to >=45 and setuptools_scm[toml] to >=6
