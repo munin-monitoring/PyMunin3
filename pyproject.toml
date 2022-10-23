@@ -36,7 +36,7 @@ write_to = "src/pymunin/_version.py"
     [[tool.towncrier.type]]
         directory = "misc"
         name = "Misc"
-        showcontent = false
+        showcontent = true
 
 [tool.black]
 
