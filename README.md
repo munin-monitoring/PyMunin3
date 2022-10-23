@@ -8,7 +8,7 @@
 
 ## Origin
 
-Standalone Python 3 adaptation of the [PyMunin](https://github.com/aouyar/PyMunin) package. This package does **not include** the plugins. If you are interested in the plugins, you can find the [Python 3 adaptation](https://github.com/penguinpee/PyMunin3/tree/pymunin_plugins_proposal) on GitHub. A [test release](https://test.pypi.org/project/PyMuninPlugins/) is available on TestPyPI.
+Standalone Python 3 adaptation of the [PyMunin](https://github.com/aouyar/PyMunin) package. This package does **not include** the plugins. If you are interested in the plugins, you can find the [Python 3 adaptation](https://github.com/munin-monitoring/PyMunin3/tree/pymunin_plugins_proposal) on GitHub. A [test release](https://test.pypi.org/project/PyMuninPlugins/) is available on TestPyPI.
 
 ## About
 
@@ -38,7 +38,7 @@ New versions are released on [PyPI](https://pypi.python.org/pypi/PyMunin3) (the 
 You can get the latest development version of the code by cloning the Git repository for the project:
 
 ```bash
-git clone git://github.com/penguinpee/PyMunin3
+git clone git://github.com/munin-monitoring/PyMunin3
 ```
 
 ## Installation
@@ -59,7 +59,7 @@ pip install dist/*.whl
 
 ## Collaboration
 
-Please report [issues](https://github.com/penguinpee/PyMunin3/issues) on GitHub. [Pull requests](https://github.com/penguinpee/PyMunin3/pulls) are also welcome.
+Please report [issues](https://github.com/munin-monitoring/PyMunin3/issues) on GitHub. [Pull requests](https://github.com/munin-monitoring/PyMunin3/pulls) are also welcome.
 
 ## Credits
 
